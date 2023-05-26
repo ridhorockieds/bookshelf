@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- Bootstrap CSS -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+			crossorigin="anonymous" />
+
+		<title>Pengelola Buku Bacaan</title>
+	</head>
+	<body>
+		<!-- Navbar -->
+		<nav class="navbar navbar-dark bg-primary">
+			<div class="container">
+				<span class="navbar-brand mb-0 h1"
+					>Aplikasi Pengelola Buku Bacaan</span
+				>
+			</div>
+		</nav>
+		<div class="content pt-lg-3 pt-2 pb-5">
+			<div class="container">
+				<div class="row my-1">
+					<div class="col-md-6 col-12 py-2">
+						<div class="card shadow">
+							<div class="card-header">
+								<h4 class="text-center">Tambah Buku Bacaan</h4>
+							</div>
+							<form id="formBuku">
+								<div class="card-body">
+									<div class="form-group py-3">
+										<label for="judulBuku"
+											>Judul Buku</label
+										>
+										<input
+											type="text"
+											class="form-control"
+											name="judul"
+											id="judulBuku"
+											placeholder="Masukkan Judul Buku"
+											autocomplete="off" />
+									</div>
+									<div class="form-group py-2">
+										<label for="penulisBuku">Penulis</label>
+										<input
+											type="text"
+											class="form-control"
+											name="penulis"
+											id="penulisBuku"
+											placeholder="Masukkan Nama Penulis"
+											autocomplete="off" />
+									</div>
+									<div class="form-group py-2">
+										<label for="tahunBuku"
+											>Tahun Terbit</label
+										>
+										<input
+											type="text"
+											class="form-control"
+											name="tahun"
+											id="tahunBuku"
+											placeholder="Masukkan Tahun Terbit"
+											autocomplete="off"
+											maxlength="4" />
+									</div>
+									<div class="form-group py-2">
+										<input
+											type="checkbox"
+											name="selesai"
+											id="sudahDibaca" />
+										<label for="sudahDibaca"
+											>Selesai Dibaca?</label
+										>
+									</div>
+								</div>
+								<div class="card-footer">
+									<input
+										type="submit"
+										class="btn btn-primary"
+										value="Tambah Buku"
+										id="submitBuku" />
+								</div>
+							</form>
+						</div>
+					</div>
+
+					<div class="col-md-6 col-12 py-2">
+						<div class="card shadow">
+							<div class="card-header">
+								<h4 class="text-center">Cari Buku</h4>
+							</div>
+							<form id="searchForm">
+								<div class="card-body">
+									<div class="form-group">
+										<label for="judulBuku"
+											>Judul Buku</label
+										>
+										<input
+											class="form-control"
+											type="text"
+											name="judul"
+											id="carijudul"
+											placeholder="Masukkan Judul Buku" />
+									</div>
+								</div>
+								<div class="card-footer">
+									<div class="form-group">
+										<input
+											type="submit"
+											value="Cari Buku"
+											class="btn btn-primary" />
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="row my-1">
+					<div class="col-md-6 col-12 py-2">
+						<div class="card shadow">
+							<div class="card-header">
+								<h3>Buku Belum Dibaca</h3>
+							</div>
+							<div id="belumdibaca">
+								<div
+									class="card shadow-sm m-2 border"
+									id="buku-1685062870397">
+									<div class="card-body">
+										<h5 class="judulbuku">Merdeka</h5>
+										<p>Aku</p>
+										<p>2022</p>
+									</div>
+									<div class="card-footer">
+										<button
+											class="btn btn-success btn-sm me-2">
+											Selesai Dibaca</button
+										><button class="btn btn-danger btn-sm">
+											Hapus
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-12 py-2">
+						<div class="card shadow">
+							<div class="card-header">
+								<h3>Buku Selesai Dibaca</h3>
+							</div>
+							<div id="selesaidibaca">
+								<div
+									class="card shadow-sm m-2 border"
+									id="buku-1685063699060">
+									<div class="card-body">
+										<h5 class="judulbuku">Dongeng</h5>
+										<p>Kamu</p>
+										<p>2011</p>
+									</div>
+									<div class="card-footer">
+										<button
+											class="btn btn-primary btn-sm me-2">
+											Belum Dibaca</button
+										><button class="btn btn-danger btn-sm">
+											Hapus
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+			crossorigin="anonymous"></script>
+		<script src="web.js"></script>
+	</body>
+</html>
